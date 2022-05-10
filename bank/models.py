@@ -11,11 +11,12 @@ class Account(models.Model):
     
 
 class Transaction(models.Model):
-    account=models.IntegerField((""))
-    amount=models.ForeignKey(Account, on_delete=models.CASCADE)
-    transaction_type=models.CharField( max_length=50)
-    other_details=models.CharField( max_length=50)
-    date=models.DateField(auto_now=False, auto_now_add=False)
+    # account=models.IntegerField(("")
+    amount=models.IntegerField(default=0)
+    transaction_type=models.CharField(max_length=50, null=True)
+    other_details=models.CharField( max_length=50,null=True)
+    date=models.DateField(auto_now=True)
+    account=models.ForeignKey(Account, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.account
-    
