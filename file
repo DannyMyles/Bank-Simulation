@@ -1,0 +1,17 @@
+{
+    name:"",
+    currentbalance:2728,
+    transactions:[
+        {
+            from:"",
+            tp:"",
+            amount:"",
+            date:""
+        }
+    ]
+}
+
+{
+    status:"error",
+    message:"you have no balance"
+}
